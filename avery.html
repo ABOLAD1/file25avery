@@ -1,0 +1,101 @@
+
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Will You Be My Valentine?</title>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('https://static.vecteezy.com/system/resources/thumbnails/018/857/662/small/valentine-s-day-background-free-vector.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container {
+        text-align: center;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .button-container {
+        margin-top: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        background-color: #ff69b4;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .button:hover {
+        background-color: #d23c74;
+    }
+
+    #yes-message,
+    #no-message {
+        display: none;
+        font-family: Georgia, serif;
+        font-size: 20px;
+        margin-top: 20px;
+    }
+
+    .gif-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+
+    .gif {
+        width: 200px; /* Adjust the width as needed */
+        display: none;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1 style="font-family: Georgia, serif;">Will You Be My Valentine, Avery?</h1>
+    <div class="button-container">
+        <button class="button" onclick="yes()">Yes</button>
+        <button class="button" onclick="no()">No</button>
+    </div>
+    <p id="yes-message">YAYYYY CHAT MO SA MESSENGER "YES BEBE MWA HEHE"</p>
+    <p id="no-message">BAWAL HUMINDI :((</p>
+    <div class="gif-container">
+        <img id="yes-gif" class="gif" src="https://media.tenor.com/ger0WV_a2WMAAAAi/happy-cat.gif" alt="Yes GIF">
+        <img id="no-gif" class="gif" src="https://media.tenor.com/zPrJ-hcfb8EAAAAj/yes-is-the-answer-luke-alvez.gif" alt="No GIF">
+        <img id="second-gif" class="gif" src="https://media1.tenor.com/m/zg7MS65BiKAAAAAC/puss-in-boots-cat.gif" alt="Second GIF">
+    </div>
+</div>
+
+<script>
+    function yes() {
+        document.getElementById("yes-message").style.display = "block";
+        document.getElementById("yes-gif").style.display = "inline";
+        document.getElementById("no-message").style.display = "none";
+        document.getElementById("no-gif").style.display = "none";
+        document.getElementById("second-gif").style.display = "none";
+    }
+
+    function no() {
+        document.getElementById("yes-message").style.display = "none";
+        document.getElementById("yes-gif").style.display = "none";
+        document.getElementById("no-message").style.display = "block";
+        document.getElementById("no-gif").style.display = "inline";
+        document.getElementById("second-gif").style.display = "inline";
+    }
+</script>
+</body>
+</html>
